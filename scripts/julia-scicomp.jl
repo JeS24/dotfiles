@@ -5,6 +5,7 @@ Note that, precompilation can take a while (> 1 hour).
 To run this script: `julia julia-default.jl`
 
 """
+using Pkg
 
 # Utility Packages
 # ----------------
