@@ -4,6 +4,8 @@ Note that, precompilation can take a while (> 1 hour).
 
 To run this script: `julia julia-default.jl`
 
+--
+Comments generated using ChatGPT.
 """
 using Pkg
 
