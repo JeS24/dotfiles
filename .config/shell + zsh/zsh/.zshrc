@@ -3,13 +3,13 @@
 #> NOTE: All comments starting with #> denote custom additions.
 #> NOTE: Some functionality below requires ohmyzsh & starship, and may also require additional packages, like fzf or exa.
 #> Some of them can be installed with the following commands:
+#> sudo apt install nala
+#> sudo nala install zsh curl aria2 fzf git exa tree ranger ncdu nvtop
+#> sudo snap install bpytop
 #> sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #> sudo sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 #> git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 #> git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-#> sudo apt install nala
-#> sudo nala install zsh curl aria2 fzf git exa tree ranger ncdu nvtop
-#> sudo snap install bpytop
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
