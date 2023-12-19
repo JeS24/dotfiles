@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+# NOTE: Run: winget configure ./gaming.configuration.dsc.yaml
+# This file sets up some gaming-related apps.
+properties:
+  configurationVersion: 0.1.0
+  assertions:
+    - resource: Microsoft.Windows.Developer/OsVersion
+      directives:
+        description: Verify minimum OS version requirement
+        allowPrerelease: true
+      settings:
+        MinVersion: '10.0.22000'
+  resources:
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install Vesktop
+        allowPrerelease: true
+      settings:
+        id: Vencord.Vesktop
+        source: winget
+    # NOTE: Don't install with Vencord.Vesktop.
+    # - resource: Microsoft.WinGet.DSC/WinGetPackage
+    #   directives:
+    #     description: Install Discord
+    #     allowPrerelease: true
+    #   settings:
+    #     id: Discord.Discord
+    #     source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install Steam
+        allowPrerelease: true
+      settings:
+        id: Valve.Steam
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install Legendary (Epic Games CLI client)
+        allowPrerelease: true
+      settings:
+        id: derrod.legendary
+        source: winget

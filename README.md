@@ -4,11 +4,12 @@ This repository hosts the dotfiles, I use. It also contains some scripts that ar
 ## dotfiles (`./.config/`)
 | File | Description |
 | ---- | ----------- |
+| windows.configuration.dsc.yaml | Windows [Desired State Configuration (DSC)](https://www.youtube.com/watch?v=9HlM0xuu01M) |
 | jes24-default.code-profile | VS Code profile |
 | .zshrc | zsh configuration |
 | starship.toml | Starship configuration |
 | Microsoft.PowerShell_profile.ps1 | Powershell (> v7) configuration |
-| .hushlogin | Hides the login message (Empty file) |
+| .hushlogin | Hides the login message (Empty file)
 | .nanorc | Nano configuration |
 | .gitconfig | Git configuration |
 | `startup.jl` | Julia startup file |

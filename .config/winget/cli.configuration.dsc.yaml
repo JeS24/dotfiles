@@ -1,0 +1,146 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+# NOTE: Run: winget configure ./cli.configuration.dsc.yaml
+# This file sets up some of the CLI tools I use.
+properties:
+  configurationVersion: 0.1.0
+  assertions:
+    - resource: Microsoft.Windows.Developer/OsVersion
+      directives:
+        description: Verify minimum OS version requirement
+        allowPrerelease: true
+      settings:
+        MinVersion: '10.0.22000'
+  resources:
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install PowerShell 7
+        allowPrerelease: true
+      settings:
+        id: Microsoft.PowerShell
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install Pandoc
+        allowPrerelease: true
+      settings:
+        id: JohnMacFarlane.Pandoc
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install FFmpeg
+        allowPrerelease: true
+      settings:
+        id: Gyan.FFmpeg
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install ImageMagick
+        allowPrerelease: true
+      settings:
+        id: ImageMagick.ImageMagick
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install PowerShell 7-x64
+        allowPrerelease: true
+      settings:
+        id: Microsoft.PowerShell
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install Oh My Posh version 19.2.1
+        allowPrerelease: true
+      settings:
+        id: JanDeDobbeleer.OhMyPosh
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install Starship
+        allowPrerelease: true
+      settings:
+        id: Starship.Starship
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install RipGrep MSVC
+        allowPrerelease: true
+      settings:
+        id: BurntSushi.ripgrep.MSVC
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install GNU Nano
+        allowPrerelease: true
+      settings:
+        id: GNU.Nano
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install Nmap
+        allowPrerelease: true
+      settings:
+        id: Insecure.Nmap
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install aria2
+        allowPrerelease: true
+      settings:
+        id: aria2.aria2
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install lf
+        allowPrerelease: true
+      settings:
+        id: gokcehan.lf
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install NTop
+        allowPrerelease: true
+      settings:
+        id: gsass1.NTop
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install fzf
+        allowPrerelease: true
+      settings:
+        id: junegunn.fzf
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install bat
+        allowPrerelease: true
+      settings:
+        id: sharkdp.bat
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install fd
+        allowPrerelease: true
+      settings:
+        id: sharkdp.fd
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install miniserve
+        allowPrerelease: true
+      settings:
+        id: svenstaro.miniserve
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install gsudo v2.4.1-fixnoninteractive
+        allowPrerelease: true
+      settings:
+        id: gerardog.gsudo
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install tre-command
+        allowPrerelease: true
+      settings:
+        id: ca.duan.tre-command
+        source: winget
