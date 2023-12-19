@@ -195,6 +195,13 @@ properties:
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
+        description: Install Legendary (Epic Games CLI client)
+        allowPrerelease: true
+      settings:
+        id: derrod.legendary
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
         description: Install Mozilla Firefox
         allowPrerelease: true
       settings:
@@ -416,6 +423,13 @@ properties:
         allowPrerelease: true
       settings:
         id: GitHub.cli
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install GitLab CLI
+        allowPrerelease: true
+      settings:
+        id: GLab.GLab
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
