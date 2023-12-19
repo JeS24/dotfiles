@@ -47,6 +47,13 @@ properties:
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
+        description: Install GitLab CLI
+        allowPrerelease: true
+      settings:
+        id: GLab.GLab
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
         description: Install Strawberry Perl (64-bit)
         allowPrerelease: true
       settings:
