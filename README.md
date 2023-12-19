@@ -4,7 +4,7 @@ This repository hosts the dotfiles, I use. It also contains some scripts that ar
 ## dotfiles (`./.config/`)
 | File | Description |
 | ---- | ----------- |
-| windows.configuration.dsc.yaml | Windows [Desired State Configuration (DSC)](https://www.youtube.com/watch?v=9HlM0xuu01M) |
+| *.configuration.dsc.yaml | Windows [Desired State Configurations (DSC)](https://www.youtube.com/watch?v=9HlM0xuu01M) |
 | jes24-default.code-profile | VS Code profile |
 | .zshrc | zsh configuration |
 | starship.toml | Starship configuration |
