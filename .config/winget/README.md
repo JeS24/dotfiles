@@ -111,3 +111,4 @@ winget confgiure ./<path/to/yaml> --accept-configuration-agreements
 | Discord                                    | Discord.Discord                            | winget      |
 | Vesktop                                    | Vencord.Vesktop                            | winget      |
 | Steam                                      | Valve.Steam                                | winget      |
+| Legendary (Epic CLI client)                | derrod.legendary                           | winget      |
