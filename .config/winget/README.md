@@ -6,7 +6,7 @@ List of programs installed via the `windows.configuration.dsc.yaml` file
 * NOTE: Some are optional (like Vesktop or Discord) due to conflicts with other apps. Check the `yaml` files for "NOTE:"s.
 * To run, use the following command:
 ```powershell
-winget confgiure ./<path/to/yaml> --accept-configuration-agreements
+winget configure ./<path/to/yaml> --accept-configuration-agreements
 # Without the --accept-configuration-agreements flag, the command will validate and then prompt you to accept the agreements.
 # The flag automates this.
 ```
