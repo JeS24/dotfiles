@@ -7,7 +7,7 @@ To run this script: `julia julia-default.jl`
 --
 Comments generated using ChatGPT.
 """
-using Pkg
+import Pkg
 
 # Utility Packages
 # ----------------
@@ -45,7 +45,6 @@ Pkg.add("Documenter")
 # Visualization Packages
 # ----------------------
 # Pluto.jl - Interactive notebooks for Julia
-import Pkg
 Pkg.add("Pluto")
 
 # IJulia.jl - Jupyter notebook support for Julia

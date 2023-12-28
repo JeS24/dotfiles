@@ -4,8 +4,7 @@
 #> NOTE: Some functionality below requires ohmyzsh & starship, and may also require additional packages, like fzf or exa.
 #> Some of them can be installed with the following commands:
 #> sudo apt install nala
-#> sudo nala install zsh curl aria2 fzf git exa tree ranger ncdu nvtop tmux
-#> sudo snap install bpytop
+#> sudo nala install zsh curl aria2 fzf git exa bat tree ranger ncdu nvtop tmux parallel btop
 #> sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #> sudo sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 #> git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
