@@ -29,8 +29,8 @@ winget configure ./<path/to/yaml> --accept-configuration-agreements
 |-------------------------------------------|--------------------------------------------|-------------|
 | PowerShell 7-x64                          | Microsoft.PowerShell                       | winget      |
 | Pandoc                                    | JohnMacFarlane.Pandoc                      | winget      |
-| ImageMagick 7.1.1-21 Q16-HDRI (64-bit)    | ImageMagick.ImageMagick                    | winget      |
-| Oh My Posh version                        | JanDeDobbeleer.OhMyPosh                    | winget      |
+| ImageMagick                               | ImageMagick.ImageMagick                    | winget      |
+| Oh My Posh                                | JanDeDobbeleer.OhMyPosh                    | winget      |
 | starship                                  | Starship.Starship                          | winget      |
 | RipGrep MSVC                              | BurntSushi.ripgrep.MSVC                    | winget      |
 | GNU Nano                                  | GNU.Nano                                   | winget      |
@@ -52,7 +52,7 @@ winget configure ./<path/to/yaml> --accept-configuration-agreements
 |-------------------------------------------|--------------------------------------------|-------------|
 | Git                                       | Git.Git                                    | winget      |
 | GitHub Desktop                            | GitHub.GitHubDesktop                       | winget      |
-| Git LFS version                           | GitHub.GitLFS                              | winget      |
+| Git LFS                                   | GitHub.GitLFS                              | winget      |
 | GitHub CLI                                | GitHub.cli                                 | winget      |
 | Strawberry Perl (64-bit)                  | StrawberryPerl.StrawberryPerl              | winget      |
 | Microsoft Visual Studio Code (User)       | Microsoft.VisualStudioCode                 | winget      |
