@@ -6,7 +6,7 @@
 #> sudo apt install nala
 #> sudo nala install zsh curl aria2 fzf git exa bat tree ranger ncdu nvtop tmux parallel btop
 #> sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-#> sudo sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+#> sudo sh -c "$(curl -fsSL https://starship.rs/install.sh)" # Or see: https://starship.rs/faq/#how-do-i-install-starship-without-sudo (Create the `bin` folder first).
 #> git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 #> git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
