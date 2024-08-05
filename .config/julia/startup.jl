@@ -1,5 +1,5 @@
 #> NOTE: All comments starting with #> denote custom additions.
-#> "C:\Users\<USER>\AppData\Local\Programs\Julia-1.9.4\etc\julia" # CHANGEME: Julia version
+#> "C:\Users\<USER>\AppData\Local\Programs\Julia-1.10.4\etc\julia" # CHANGEME: Julia version
 
 # This file should contain site-specific commands to be executed on Julia startup;
 # Users may store their own personal commands in `~/.julia/config/startup.jl`.

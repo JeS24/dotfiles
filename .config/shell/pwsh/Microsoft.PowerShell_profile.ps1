@@ -10,7 +10,7 @@
 
 # OMP
 oh-my-posh init pwsh | Invoke-Expression
-oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/robbyrussell.omp.json' | Invoke-Expression
+# oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/clean-detailed.omp.json' | Invoke-Expression  # Superceded by Starship
 
 Import-Module posh-git
 Import-Module -Name Terminal-Icons
@@ -46,6 +46,18 @@ function cpn {
     }
 }
 
+## winget
+function wls { winget list }
+function wfd { param ( $query ) winget search $query }
+function win { param ( $app ) winget install $app }
+function wup { param ( $app ) winget upgrade $app }
+function wupa { sudo winget upgrade --silent --accept-source-agreements --accept-package-agreements }
+
+function wun { param ( $app ) winget uninstall $app }
+
+## RDP / MSTSC
+function rdp { param ( $ip ) mstsc /v:$ip }
+
 ## Python + Django
 ### Activates virtualenv at $VenvDir
 function vs { param ( $VenvDir ) & $VenvDir/Scripts/activate }
@@ -66,7 +78,11 @@ function redo2 { pmk && pmm && pmc }
 ## General
 New-Alias restart "Restart-Computer"
 
-## Python - CHANGEME: Update paths to your Python installation
-New-Alias py "E:\Apps\Coding\WPy3.10.5\WPy64-31050\python-3.10.5.amd64\python.exe"
-New-Alias jpy "E:\Apps\Coding\WPy3.10.5\WPy64-31050\Jupyter Lab.exe"
-New-Alias jpynb "E:\Apps\Coding\WPy3.10.5\WPy64-31050\Jupyter Notebook.exe"
+## Starship init
+Invoke-Expression (& 'C:\Program Files\starship\bin\starship.exe' init powershell --print-full-init | Out-String)
+
+## PowerToys CommandNotFound module
+#f45873b3-b655-43a6-b217-97c00aa0db58 PowerToys CommandNotFound module
+
+Import-Module -Name Microsoft.WinGet.CommandNotFound
+#f45873b3-b655-43a6-b217-97c00aa0db58
