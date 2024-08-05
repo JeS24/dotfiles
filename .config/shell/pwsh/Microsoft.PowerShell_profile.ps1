@@ -17,6 +17,8 @@ Import-Module -Name Terminal-Icons
 
 
 # Some functions to imitate zsh / *nix behaviour
+function NZ { code $profile }
+
 function take { param ( $DirName ) mkdir $DirName && cd $DirName }
 
 function tk { param ( $proc ) taskkill /IM $proc /F }
