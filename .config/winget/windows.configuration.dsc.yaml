@@ -1,7 +1,6 @@
+# Created using winget configure export 1.9.1981-preview
 # yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
 # NOTE: Don't remove the first line ^^^, it's used by the yaml-language-server to validate the file.
-#
-# NOTE: THIS IS A COMBINED VERSION OF THE OTHER DSC CONFIGS IN THIS FOLDER.
 # 
 # NOTE: This requires pre-release `winget` - https://aka.ms/getwingetpreview
 #
@@ -13,11 +12,8 @@
 # before running it.
 # NOTE: `allowPrerelease: true` is required as DSC is still in preview.
 #
-# See ./winget-install-list.txt for the list of installed packages.
-#
-# TODO: Add npm & python packages to this file.
 properties:
-  configurationVersion: 0.1.0
+  configurationVersion: 0.2
   assertions:
     - resource: Microsoft.Windows.Developer/OsVersion
       directives:
@@ -80,488 +76,732 @@ properties:
         # Use caution when setting `RestartExplorer: true` as this will force explorer to close.
         RestartExplorer: true # Required to apply changes
     # NOTE: Install packages
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install PowerShell 7
-        allowPrerelease: true
-      settings:
-        id: Microsoft.PowerShell
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Todoist
-        allowPrerelease: true
-      settings:
-        id: Doist.Todoist
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Signal
-        allowPrerelease: true
-      settings:
-        id: OpenWhisperSystems.Signal
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Telegram Desktop
-        allowPrerelease: true
-      settings:
-        id: Telegram.TelegramDesktop
-        source: winget
-    # NOTE: Don't install with Discord.Discord.
-    # - resource: Microsoft.WinGet.DSC/WinGetPackage
-    #   directives:
-    #     description: Install Vesktop
-    #     allowPrerelease: true
-    #   settings:
-    #     id: Vencord.Vesktop
-    #     source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Discord
-        allowPrerelease: true
-      settings:
-        id: Discord.Discord
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Internet Download Manager
-        allowPrerelease: true
-      settings:
-        id: Tonec.InternetDownloadManager
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install CrystalDiskInfo
-        allowPrerelease: true
-      settings:
-        id: CrystalDewWorld.CrystalDiskInfo
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install HWiNFO64
-        allowPrerelease: true
-      settings:
-        id: REALiX.HWiNFO
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install DisplayFusion
-        allowPrerelease: true
-      settings:
-        id: BinaryFortress.DisplayFusion
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install NanaZip
-        allowPrerelease: true
-      settings:
-        id: M2Team.NanaZip
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install HandBrake
-        allowPrerelease: true
-      settings:
-        id: HandBrake.HandBrake
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install TreeSize Free
-        allowPrerelease: true
-      settings:
-        id: JAMSoftware.TreeSize.Free
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Fluent Reader
-        allowPrerelease: true
-      settings:
-        id: yang991178.fluent-reader
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Sonic Pi
-        allowPrerelease: true
-      settings:
-        id: SonicPi.SonicPi
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Steam
-        allowPrerelease: true
-      settings:
-        id: Valve.Steam
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Legendary (Epic Games CLI client)
-        allowPrerelease: true
-      settings:
-        id: derrod.legendary
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Mozilla Firefox
-        allowPrerelease: true
-      settings:
-        id: Mozilla.Firefox
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Thorium (AVX2)
-        allowPrerelease: true
-      settings:
-        id: Alex313031.Thorium.AVX2
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Everything
-        allowPrerelease: true
-      settings:
-        id: voidtools.Everything
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install EverythingToolbar
-        allowPrerelease: true
-      settings:
-        id: stnkl.EverythingToolbar
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install MPC-BE x64
-        allowPrerelease: true
-      settings:
-        id: MPC-BE.MPC-BE
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install PowerToys (Preview) x64
-        allowPrerelease: true
-      settings:
-        id: Microsoft.PowerToys
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install MeshLab
-        allowPrerelease: true
-      settings:
-        id: CNRISTI.MeshLab
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install FortiClient VPN
-        allowPrerelease: true
-      settings:
-        id: Fortinet.FortiClientVPN
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Pandoc
-        allowPrerelease: true
-      settings:
-        id: JohnMacFarlane.Pandoc
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install FFmpeg
-        allowPrerelease: true
-      settings:
-        id: Gyan.FFmpeg
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install ImageMagick
-        allowPrerelease: true
-      settings:
-        id: ImageMagick.ImageMagick
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Hack Fonts version 1.6.0
-        allowPrerelease: true
-      settings:
-        id: SourceFoundry.HackFonts
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Oh My Posh version 19.2.1
-        allowPrerelease: true
-      settings:
-        id: JanDeDobbeleer.OhMyPosh
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Starship
-        allowPrerelease: true
-      settings:
-        id: Starship.Starship
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install RipGrep MSVC
-        allowPrerelease: true
-      settings:
-        id: BurntSushi.ripgrep.MSVC
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install GNU Nano
-        allowPrerelease: true
-      settings:
-        id: GNU.Nano
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Nmap
-        allowPrerelease: true
-      settings:
-        id: Insecure.Nmap
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install aria2
-        allowPrerelease: true
-      settings:
-        id: aria2.aria2
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install lf
-        allowPrerelease: true
-      settings:
-        id: gokcehan.lf
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install NTop
-        allowPrerelease: true
-      settings:
-        id: gsass1.NTop
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install fzf
-        allowPrerelease: true
-      settings:
-        id: junegunn.fzf
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install bat
-        allowPrerelease: true
-      settings:
-        id: sharkdp.bat
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install fd
-        allowPrerelease: true
-      settings:
-        id: sharkdp.fd
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install miniserve
-        allowPrerelease: true
-      settings:
-        id: svenstaro.miniserve
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install gsudo v2.4.1-fixnoninteractive
-        allowPrerelease: true
-      settings:
-        id: gerardog.gsudo
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Node.js
-        allowPrerelease: true
-      settings:
-        id: OpenJS.NodeJS
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install tre-command
-        allowPrerelease: true
-      settings:
-        id: ca.duan.tre-command
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install MacType
-        allowPrerelease: true
-      settings:
-        id: MacType.MacType
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Git
-        allowPrerelease: true
-      settings:
-        id: Git.Git
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install GitHub Desktop
-        allowPrerelease: true
-      settings:
-        id: GitHub.GitHubDesktop
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Git LFS version 3.4.0
-        allowPrerelease: true
-      settings:
-        id: GitHub.GitLFS
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install GitHub CLI
-        allowPrerelease: true
-      settings:
-        id: GitHub.cli
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install GitLab CLI
-        allowPrerelease: true
-      settings:
-        id: GLab.GLab
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Strawberry Perl (64-bit)
-        allowPrerelease: true
-      settings:
-        id: StrawberryPerl.StrawberryPerl
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Microsoft Visual Studio Code (User)
-        allowPrerelease: true
-      settings:
-        id: Microsoft.VisualStudioCode
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Julia 1.9.4
-        allowPrerelease: true
-      settings:
-        id: Julialang.Julia
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Python 3.11
-        allowPrerelease: true
-      settings:
-        id: Python.Python.3.11
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Notepad++ (64-bit x64)
-        allowPrerelease: true
-      settings:
-        id: Notepad++.Notepad++
-        source: winget
-    # NOTE: Optional
-    # - resource: Microsoft.WinGet.DSC/WinGetPackage
-    #   directives:
-    #     description: Install Nvidia GeForce Experience
-    #     allowPrerelease: true
-    #   settings:
-    #     id: Nvidia.GeForceExperience
-    #     source: winget
-    # - resource: Microsoft.WinGet.DSC/WinGetPackage
-    #   directives:
-    #     description: Install Nvidia PhysX
-    #     allowPrerelease: true
-    #   settings:
-    #     id: Nvidia.PhysX
-    #     source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Microsoft Visual C++ 2008 Redistributable
-        allowPrerelease: true
-      settings:
-        id: Microsoft.VCRedist.2008.x86
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Microsoft Visual C++ 2010 x86 Redistributable
-        allowPrerelease: true
-      settings:
-        id: Microsoft.VCRedist.2010.x86
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Microsoft Visual C++ 2010 x64 Redistributable
-        allowPrerelease: true
-      settings:
-        id: Microsoft.VCRedist.2010.x64
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Microsoft Visual C++ 2012 Redistributable
-        allowPrerelease: true
-      settings:
-        id: Microsoft.VCRedist.2012.x86
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Microsoft Visual C++ 2012 x64 Redistributable
-        allowPrerelease: true
-      settings:
-        id: Microsoft.VCRedist.2013.x86
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Microsoft Visual C++ 2013 Redistributable (x86)
-        allowPrerelease: true
-      settings:
-        id: Microsoft.VCRedist.2013.x86
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Microsoft Visual C++ 2015-2022 Redistributable (x64)
-        allowPrerelease: true
-      settings:
-        id: Microsoft.VCRedist.2015+.x64
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Microsoft Visual C++ 2015-2019 Redistributable (x86)
-        allowPrerelease: true
-      settings:
-        id: Microsoft.VCRedist.2015+.x86
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Microsoft .NET Runtime 6.0.25 (x64)
-        allowPrerelease: true
-      settings:
-        id: Microsoft.DotNet.Runtime.6
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Microsoft .NET Runtime 7.0.14 (x64)
-        allowPrerelease: true
-      settings:
-        id: Microsoft.DotNet.Runtime.7
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Microsoft Windows Desktop Runtime 6.0.25
-        allowPrerelease: true
-      settings:
-        id: Microsoft.DotNet.DesktopRuntime.6
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Microsoft Windows Desktop Runtime 7.0.14
-        allowPrerelease: true
-      settings:
-        id: Microsoft.DotNet.DesktopRuntime.7
-        source: winget
+  resources:
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: CrystalDewWorld.CrystalDiskInfo
+    directives:
+      description: "Install CrystalDewWorld.CrystalDiskInfo"
+      allowPrerelease: true
+    settings:
+      id: "CrystalDewWorld.CrystalDiskInfo"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Git.Git
+    directives:
+      description: "Install Git.Git"
+      allowPrerelease: true
+    settings:
+      id: "Git.Git"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: REALiX.HWiNFO
+    directives:
+      description: "Install REALiX.HWiNFO"
+      allowPrerelease: true
+    settings:
+      id: "REALiX.HWiNFO"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: SourceFoundry.HackFonts
+    directives:
+      description: "Install SourceFoundry.HackFonts"
+      allowPrerelease: true
+    settings:
+      id: "SourceFoundry.HackFonts"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Mozilla.Firefox
+    directives:
+      description: "Install Mozilla.Firefox"
+      allowPrerelease: true
+    settings:
+      id: "Mozilla.Firefox"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Notepad++.Notepad++
+    directives:
+      description: "Install Notepad++.Notepad++"
+      allowPrerelease: true
+    settings:
+      id: "Notepad++.Notepad++"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: JAMSoftware.TreeSize.Free
+    directives:
+      description: "Install JAMSoftware.TreeSize.Free"
+      allowPrerelease: true
+    settings:
+      id: "JAMSoftware.TreeSize.Free"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: DigitalScholar.Zotero
+    directives:
+      description: "Install DigitalScholar.Zotero"
+      allowPrerelease: true
+    settings:
+      id: "DigitalScholar.Zotero"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: yang991178.fluent-reader
+    directives:
+      description: "Install yang991178.fluent-reader"
+      allowPrerelease: true
+    settings:
+      id: "yang991178.fluent-reader"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: JohnMacFarlane.Pandoc
+    directives:
+      description: "Install JohnMacFarlane.Pandoc"
+      allowPrerelease: true
+    settings:
+      id: "JohnMacFarlane.Pandoc"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.VCRedist.2010.x64
+    directives:
+      description: "Install Microsoft.VCRedist.2010.x64"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.VCRedist.2010.x64"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: GitHub.GitLFS
+    directives:
+      description: "Install GitHub.GitLFS"
+      allowPrerelease: true
+    settings:
+      id: "GitHub.GitLFS"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Apple.AppleMobileDeviceSupport
+    directives:
+      description: "Install Apple.AppleMobileDeviceSupport"
+      allowPrerelease: true
+    settings:
+      id: "Apple.AppleMobileDeviceSupport"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: dnGrep.dnGrep
+    directives:
+      description: "Install dnGrep.dnGrep"
+      allowPrerelease: true
+    settings:
+      id: "dnGrep.dnGrep"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Apple.Bonjour
+    directives:
+      description: "Install Apple.Bonjour"
+      allowPrerelease: true
+    settings:
+      id: "Apple.Bonjour"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: SonicPi.SonicPi
+    directives:
+      description: "Install SonicPi.SonicPi"
+      allowPrerelease: true
+    settings:
+      id: "SonicPi.SonicPi"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Google.GoogleDrive
+    directives:
+      description: "Install Google.GoogleDrive"
+      allowPrerelease: true
+    settings:
+      id: "Google.GoogleDrive"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: ca.duan.tre-command
+    directives:
+      description: "Install ca.duan.tre-command"
+      allowPrerelease: true
+    settings:
+      id: "ca.duan.tre-command"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: MacType.MacType
+    directives:
+      description: "Install MacType.MacType"
+      allowPrerelease: true
+    settings:
+      id: "MacType.MacType"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: GitHub.cli
+    directives:
+      description: "Install GitHub.cli"
+      allowPrerelease: true
+    settings:
+      id: "GitHub.cli"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: StrawberryPerl.StrawberryPerl
+    directives:
+      description: "Install StrawberryPerl.StrawberryPerl"
+      allowPrerelease: true
+    settings:
+      id: "StrawberryPerl.StrawberryPerl"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: voidtools.Everything
+    directives:
+      description: "Install voidtools.Everything"
+      allowPrerelease: true
+    settings:
+      id: "voidtools.Everything"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Fortinet.FortiClientVPN
+    directives:
+      description: "Install Fortinet.FortiClientVPN"
+      allowPrerelease: true
+    settings:
+      id: "Fortinet.FortiClientVPN"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: BlenderFoundation.Blender
+    directives:
+      description: "Install BlenderFoundation.Blender"
+      allowPrerelease: true
+    settings:
+      id: "BlenderFoundation.Blender"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Nvidia.GeForceExperience
+    directives:
+      description: "Install Nvidia.GeForceExperience"
+      allowPrerelease: true
+    settings:
+      id: "Nvidia.GeForceExperience"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Nvidia.PhysX
+    directives:
+      description: "Install Nvidia.PhysX"
+      allowPrerelease: true
+    settings:
+      id: "Nvidia.PhysX"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Starship.Starship
+    directives:
+      description: "Install Starship.Starship"
+      allowPrerelease: true
+    settings:
+      id: "Starship.Starship"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: OpenJS.NodeJS
+    directives:
+      description: "Install OpenJS.NodeJS"
+      allowPrerelease: true
+    settings:
+      id: "OpenJS.NodeJS"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.PowerShell
+    directives:
+      description: "Install Microsoft.PowerShell"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.PowerShell"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: gerardog.gsudo
+    directives:
+      description: "Install gerardog.gsudo"
+      allowPrerelease: true
+    settings:
+      id: "gerardog.gsudo"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Apple.iTunes
+    directives:
+      description: "Install Apple.iTunes"
+      allowPrerelease: true
+    settings:
+      id: "Apple.iTunes"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: MPC-BE.MPC-BE
+    directives:
+      description: "Install MPC-BE.MPC-BE"
+      allowPrerelease: true
+    settings:
+      id: "MPC-BE.MPC-BE"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: HandBrake.HandBrake
+    directives:
+      description: "Install HandBrake.HandBrake"
+      allowPrerelease: true
+    settings:
+      id: "HandBrake.HandBrake"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Tonec.InternetDownloadManager
+    directives:
+      description: "Install Tonec.InternetDownloadManager"
+      allowPrerelease: true
+    settings:
+      id: "Tonec.InternetDownloadManager"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: CNRISTI.MeshLab
+    directives:
+      description: "Install CNRISTI.MeshLab"
+      allowPrerelease: true
+    settings:
+      id: "CNRISTI.MeshLab"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.Edge
+    directives:
+      description: "Install Microsoft.Edge"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.Edge"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.EdgeWebView2Runtime
+    directives:
+      description: "Install Microsoft.EdgeWebView2Runtime"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.EdgeWebView2Runtime"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Insecure.Nmap
+    directives:
+      description: "Install Insecure.Nmap"
+      allowPrerelease: true
+    settings:
+      id: "Insecure.Nmap"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Valve.Steam
+    directives:
+      description: "Install Valve.Steam"
+      allowPrerelease: true
+    settings:
+      id: "Valve.Steam"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: qBittorrent.qBittorrent
+    directives:
+      description: "Install qBittorrent.qBittorrent"
+      allowPrerelease: true
+    settings:
+      id: "qBittorrent.qBittorrent"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.DotNet.Runtime.7
+    directives:
+      description: "Install Microsoft.DotNet.Runtime.7"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.DotNet.Runtime.7"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.DotNet.DesktopRuntime.6
+    directives:
+      description: "Install Microsoft.DotNet.DesktopRuntime.6"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.DotNet.DesktopRuntime.6"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Python.Launcher
+    directives:
+      description: "Install Python.Launcher"
+      allowPrerelease: true
+    settings:
+      id: "Python.Launcher"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.VCRedist.2012.x86
+    directives:
+      description: "Install Microsoft.VCRedist.2012.x86"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.VCRedist.2012.x86"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.DotNet.DesktopRuntime.7
+    directives:
+      description: "Install Microsoft.DotNet.DesktopRuntime.7"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.DotNet.DesktopRuntime.7"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.VCRedist.2015+.x86
+    directives:
+      description: "Install Microsoft.VCRedist.2015+.x86"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.VCRedist.2015+.x86"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.VCRedist.2015+.x64
+    directives:
+      description: "Install Microsoft.VCRedist.2015+.x64"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.VCRedist.2015+.x64"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: GLab.GLab
+    directives:
+      description: "Install GLab.GLab"
+      allowPrerelease: true
+    settings:
+      id: "GLab.GLab"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.DotNet.DesktopRuntime.8
+    directives:
+      description: "Install Microsoft.DotNet.DesktopRuntime.8"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.DotNet.DesktopRuntime.8"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.VCRedist.2008.x86
+    directives:
+      description: "Install Microsoft.VCRedist.2008.x86"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.VCRedist.2008.x86"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.VCRedist.2013.x86
+    directives:
+      description: "Install Microsoft.VCRedist.2013.x86"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.VCRedist.2013.x86"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Apple.AppleSoftwareUpdate
+    directives:
+      description: "Install Apple.AppleSoftwareUpdate"
+      allowPrerelease: true
+    settings:
+      id: "Apple.AppleSoftwareUpdate"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: stnkl.EverythingToolbar
+    directives:
+      description: "Install stnkl.EverythingToolbar"
+      allowPrerelease: true
+    settings:
+      id: "stnkl.EverythingToolbar"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.VCRedist.2010.x86
+    directives:
+      description: "Install Microsoft.VCRedist.2010.x86"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.VCRedist.2010.x86"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.DotNet.Runtime.6
+    directives:
+      description: "Install Microsoft.DotNet.Runtime.6"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.DotNet.Runtime.6"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Doist.Todoist
+    directives:
+      description: "Install Doist.Todoist"
+      allowPrerelease: true
+    settings:
+      id: "Doist.Todoist"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Vencord.Vesktop
+    directives:
+      description: "Install Vencord.Vesktop"
+      allowPrerelease: true
+    settings:
+      id: "Vencord.Vesktop"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: OpenWhisperSystems.Signal
+    directives:
+      description: "Install OpenWhisperSystems.Signal"
+      allowPrerelease: true
+    settings:
+      id: "OpenWhisperSystems.Signal"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: BurntSushi.ripgrep.MSVC
+    directives:
+      description: "Install BurntSushi.ripgrep.MSVC"
+      allowPrerelease: true
+    settings:
+      id: "BurntSushi.ripgrep.MSVC"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Discord.Discord
+    directives:
+      description: "Install Discord.Discord"
+      allowPrerelease: true
+    settings:
+      id: "Discord.Discord"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: OliverBetz.ExifTool
+    directives:
+      description: "Install OliverBetz.ExifTool"
+      allowPrerelease: true
+    settings:
+      id: "OliverBetz.ExifTool"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: FrankBijnen.ExifToolGUI
+    directives:
+      description: "Install FrankBijnen.ExifToolGUI"
+      allowPrerelease: true
+    settings:
+      id: "FrankBijnen.ExifToolGUI"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: GNU.Nano
+    directives:
+      description: "Install GNU.Nano"
+      allowPrerelease: true
+    settings:
+      id: "GNU.Nano"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: GitHub.GitHubDesktop
+    directives:
+      description: "Install GitHub.GitHubDesktop"
+      allowPrerelease: true
+    settings:
+      id: "GitHub.GitHubDesktop"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Gyan.FFmpeg
+    directives:
+      description: "Install Gyan.FFmpeg"
+      allowPrerelease: true
+    settings:
+      id: "Gyan.FFmpeg"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Julialang.Julia
+    directives:
+      description: "Install Julialang.Julia"
+      allowPrerelease: true
+    settings:
+      id: "Julialang.Julia"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: MiKTeX.MiKTeX
+    directives:
+      description: "Install MiKTeX.MiKTeX"
+      allowPrerelease: true
+    settings:
+      id: "MiKTeX.MiKTeX"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: JanDeDobbeleer.OhMyPosh
+    directives:
+      description: "Install JanDeDobbeleer.OhMyPosh"
+      allowPrerelease: true
+    settings:
+      id: "JanDeDobbeleer.OhMyPosh"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.OneDrive
+    directives:
+      description: "Install Microsoft.OneDrive"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.OneDrive"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Alex313031.Thorium.AVX2
+    directives:
+      description: "Install Alex313031.Thorium.AVX2"
+      allowPrerelease: true
+    settings:
+      id: "Alex313031.Thorium.AVX2"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Zoom.Zoom.EXE
+    directives:
+      description: "Install Zoom.Zoom.EXE"
+      allowPrerelease: true
+    settings:
+      id: "Zoom.Zoom.EXE"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: aria2.aria2
+    directives:
+      description: "Install aria2.aria2"
+      allowPrerelease: true
+    settings:
+      id: "aria2.aria2"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: derrod.legendary
+    directives:
+      description: "Install derrod.legendary"
+      allowPrerelease: true
+    settings:
+      id: "derrod.legendary"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: eza-community.eza
+    directives:
+      description: "Install eza-community.eza"
+      allowPrerelease: true
+    settings:
+      id: "eza-community.eza"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: gokcehan.lf
+    directives:
+      description: "Install gokcehan.lf"
+      allowPrerelease: true
+    settings:
+      id: "gokcehan.lf"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: gsass1.NTop
+    directives:
+      description: "Install gsass1.NTop"
+      allowPrerelease: true
+    settings:
+      id: "gsass1.NTop"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: junegunn.fzf
+    directives:
+      description: "Install junegunn.fzf"
+      allowPrerelease: true
+    settings:
+      id: "junegunn.fzf"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: sharkdp.bat
+    directives:
+      description: "Install sharkdp.bat"
+      allowPrerelease: true
+    settings:
+      id: "sharkdp.bat"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: sharkdp.fd
+    directives:
+      description: "Install sharkdp.fd"
+      allowPrerelease: true
+    settings:
+      id: "sharkdp.fd"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: svenstaro.miniserve
+    directives:
+      description: "Install svenstaro.miniserve"
+      allowPrerelease: true
+    settings:
+      id: "svenstaro.miniserve"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Python.Python.3.11
+    directives:
+      description: "Install Python.Python.3.11"
+      allowPrerelease: true
+    settings:
+      id: "Python.Python.3.11"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Telegram.TelegramDesktop
+    directives:
+      description: "Install Telegram.TelegramDesktop"
+      allowPrerelease: true
+    settings:
+      id: "Telegram.TelegramDesktop"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.PowerToys
+    directives:
+      description: "Install Microsoft.PowerToys"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.PowerToys"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.VisualStudioCode
+    directives:
+      description: "Install Microsoft.VisualStudioCode"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.VisualStudioCode"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: M2Team.NanaZip
+    directives:
+      description: "Install M2Team.NanaZip"
+      allowPrerelease: true
+    settings:
+      id: "M2Team.NanaZip"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.AppInstaller
+    directives:
+      description: "Install Microsoft.AppInstaller"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.AppInstaller"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.UI.Xaml.2.7
+    directives:
+      description: "Install Microsoft.UI.Xaml.2.7"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.UI.Xaml.2.7"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.UI.Xaml.2.8
+    directives:
+      description: "Install Microsoft.UI.Xaml.2.8"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.UI.Xaml.2.8"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.VCLibs.Desktop.14
+    directives:
+      description: "Install Microsoft.VCLibs.Desktop.14"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.VCLibs.Desktop.14"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.DevHome
+    directives:
+      description: "Install Microsoft.DevHome"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.DevHome"
+      source: "winget"
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Microsoft.WindowsTerminal
+    directives:
+      description: "Install Microsoft.WindowsTerminal"
+      allowPrerelease: true
+    settings:
+      id: "Microsoft.WindowsTerminal"
+      source: "winget"

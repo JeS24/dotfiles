@@ -53,7 +53,7 @@ function wls { winget list }
 function wfd { param ( $query ) winget search $query }
 function win { param ( $app ) winget install $app }
 function wup { param ( $app ) winget upgrade $app }
-function wupa { sudo winget upgrade --silent --accept-source-agreements --accept-package-agreements }
+function wupa { sudo winget upgrade --all --silent --accept-source-agreements --accept-package-agreements }
 
 function wun { param ( $app ) winget uninstall $app }
 
