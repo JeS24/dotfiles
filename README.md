@@ -4,7 +4,7 @@ This repository hosts the dotfiles, I use. It also contains some scripts that ar
 ## dotfiles (`./.config/`)
 | File | Description |
 | ---- | ----------- |
-| [*.configuration.dsc.yaml](./.config/winget/) | Windows [Desired State Configurations (DSC)](https://www.youtube.com/watch?v=9HlM0xuu01M) |
+| [windows.configuration.dsc.yaml](./.config/winget/) | Windows [Desired State Configurations (DSC)](https://www.youtube.com/watch?v=9HlM0xuu01M) |
 | [jes24-default.code-profile](./.config/.vscode/jes24-default.code-profile) | VS Code profile |
 | [.zshrc](./.config/shell/zsh/.zshrc) | zsh configuration |
 | [starship.toml](./.config/shell/starship/starship.toml) | Starship configuration |
@@ -18,5 +18,6 @@ This repository hosts the dotfiles, I use. It also contains some scripts that ar
 
 | Script | Description |
 | ------ | ----------- |
+| [`gen-yaml.ps1`](./scripts/gen-yaml.ps1) |   Gets all installed winget packages and exports them to a single `windows.configuration.dsc.yaml` file |
 | [`socket_test.py`](./scripts/socket_test.py) | Checks if the socket is open. `ping` is not always reliable. More details can be found here: https://docs.python.org/3/library/socket.html |
-| [`julia-scicomp.jl`](./scripts/julia-scicomp.jl) | Installs useful utility & scientific computing Julia packages |
+| [`julia-scicomp.jl`](./scripts/julia-scicomp.jl) | Installs useful utility, machine learning & scientific computing Julia packages |
