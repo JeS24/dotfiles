@@ -8,6 +8,16 @@ List of programs installed via the `windows.configuration.dsc.yaml` file
   # Without the --accept-configuration-agreements flag, the command will validate and 
   # then prompt you to accept the agreements. The flag automates this.
   ```
+* NOTE: If you only want the packages without any system configuration, you can use the [`winget.export.json`](./winget.export.json) file, like so:
+  ```powershell
+  winget import -i winget.export.json --accept-package-agreements --accept-source-agreements
+  # Without the --accept-* flags, the command will validate and 
+  # then prompt you to accept the agreements. The flag automates this.
+  ```
+* To generate your own `winget.export.json` file, you can use the following command:
+  ```powershell
+  winget export -o winget.export.json
+  ```
 
 ## Table of Contents
 | Name                                        | ID                                           |
