@@ -297,3 +297,6 @@ autoload -Uz compinit && compinit
 
 # source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
+
+# Date-time-stamp (Yellow)
+PROMPT='%F{226}[%D{%d/%m/%y %H:%M:%S}]%f '$PROMPT
