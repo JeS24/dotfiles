@@ -1,10 +1,10 @@
 #> ~/.zshrc
 
 #> NOTE: All comments starting with #> denote custom additions.
-#> NOTE: Some functionality below requires ohmyzsh & starship, and may also require additional packages, like fzf or exa.
+#> NOTE: Some functionality below requires ohmyzsh & starship, and may also require additional packages, like fzf or eza.
 #> Some of them can be installed with the following commands:
 #> sudo apt install nala
-#> sudo nala install zsh curl aria2 fzf git exa bat tree ranger ncdu nvtop tmux parallel btop
+#> sudo nala install zsh curl aria2 fzf git eza bat tree ranger ncdu nvtop tmux parallel btop
 #> sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #> sudo sh -c "$(curl -fsSL https://starship.rs/install.sh)" # Or see: https://starship.rs/faq/#how-do-i-install-starship-without-sudo (Create the `bin` folder first).
 #> git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -153,7 +153,7 @@ alias sus="sudo ufw status"
 alias cls=clear
 alias CLS=clear
 alias lm="ls -alh --block-size=M"
-alias l="exa -alFh"
+alias l="eza -alhF"
 alias cnt="ls -1 | wc -l"
 alias dush="du -sh"
 
@@ -204,7 +204,7 @@ alias pyt="pyl train.py"
 alias wgp="lshw -C display | grep GA"
 alias wnv="watch -c -n 0.5  nvidia-smi"
 alias wcat="watch -c -n 1 cat"
-alias wlh="watch -c -n 0.5 exa -alFh"
+alias wlh="watch -c -n 0.5 eza -alhF"
 alias wlm="watch -c -n 0.5 ls -l --block-size=MB"
 
 
