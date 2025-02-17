@@ -268,6 +268,7 @@ function cpn {
 function his() {
 	history | sed -n "$1,$2p"
 }
+alias hfd="history | grep "
 
 ##> Activates virtualenv at given path
 function vs0() {
