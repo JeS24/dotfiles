@@ -168,11 +168,13 @@ alias sni="sudo nala install"
 ##> Utils
 alias bpt="btop"
 alias nvt="sudo nvtop"
+alias nvti="nvitop"
 alias ncd="sudo ncdu"
 alias t="tmux -u"
 alias tls="t ls"
 alias tat="t a -t"
 alias tns="t new -s"
+alias tkt="tmux kill-session -t"
 alias aget="aria2c --file-allocation=none -c -x 10 -s 10"
 
 ###> Exiftool / Magick
