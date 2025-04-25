@@ -174,8 +174,10 @@ alias t="tmux -u"
 alias tls="t ls"
 alias tat="t a -t"
 alias tns="t new -s"
+alias tnd="t new -d"
 alias tkt="tmux kill-session -t"
 alias aget="aria2c --file-allocation=none -c -x 10 -s 10"
+alias osync="/usr/local/bin/osync.sh" 
 
 ###> Exiftool / Magick
 alias ef="exiftool"
