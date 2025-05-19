@@ -9,6 +9,13 @@
 #> sudo sh -c "$(curl -fsSL https://starship.rs/install.sh)" # Or see: https://starship.rs/faq/#how-do-i-install-starship-without-sudo (Create the `bin` folder first).
 #> git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 #> git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+#> Setup SSH keys:
+#> 1. ssh-keygen -t ed25519 - ensure no overwrite of other keys - no passphrase
+#> 2. Create .ssh/ folder on remote -> ssh [user]@[IP] mkdir -p ~/.ssh
+#> 3. Copy over keys -> scp ~/.ssh/[pubkey_name].pub [user]@[IP]:~/.ssh/
+#> 4. Add key to auth_keys -> cat ~/.ssh/[pubkey_name].pub >> ~/.ssh/authorized_keys
+#> 5. On remote, run -> chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys
+#> 6. Test connection -> ssh [user]@[IP]
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
