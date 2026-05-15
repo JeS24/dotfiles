@@ -48,10 +48,14 @@ function cpn {
     }
 }
 
+## ls
+function lsm { ls | Select-Object Name, @{Name="MegaBytes";Expression={$_.Length / 1MB}}}
+
 ## winget
 function wls { winget list }
 function wfd { param ( $query ) winget search $query }
 function win { param ( $app ) winget install $app }
+function wupl { winget upgrade }
 function wup { param ( $app ) winget upgrade $app }
 function wupa { sudo winget upgrade --all --silent --accept-source-agreements --accept-package-agreements }
 

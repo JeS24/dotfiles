@@ -21,3 +21,5 @@ This repository hosts the dotfiles, I use. It also contains some scripts that ar
 | [`gen-yaml.ps1`](./scripts/gen-yaml.ps1) |   Gets all installed winget packages and exports them to a single `windows.configuration.dsc.yaml` file |
 | [`socket_test.py`](./scripts/socket_test.py) | Checks if the socket is open. `ping` is not always reliable. More details can be found here: https://docs.python.org/3/library/socket.html |
 | [`julia-scicomp.jl`](./scripts/julia-scicomp.jl) | Installs useful utility, machine learning & scientific computing Julia packages |
+| [`setup.sh`](./scripts/setup.sh) | Main setup script. It will set up the dotfiles and run the tmux backup and setup scripts. |
+| [`tmux-backup.sh`](./scripts/tmux-backup.sh) | Backs up tmux configuration files to `~/system/` |

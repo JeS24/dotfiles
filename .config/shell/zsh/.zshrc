@@ -192,7 +192,7 @@ alias tns="t new -s"
 alias tnd="t new -d"
 alias tkt="tmux kill-session -t"
 alias aget="aria2c --file-allocation=none -c -x 10 -s 10"
-alias osync="/usr/local/bin/osync.sh" 
+alias osync="/usr/local/bin/osync.sh"
 
 ###> Exiftool / Magick
 alias ef="exiftool"
@@ -221,11 +221,12 @@ alias mc="/opt/miniconda3/bin/conda"
 ##> ML/DL
 alias pyt="pyl train.py"
 alias wgp="lshw -C display | grep GA"
+alias bat="batcat"
+alias wcat="watch -c -n 1 batcat"
 alias wnv="watch -c -n 0.5  nvidia-smi"
-alias wcat="watch -c -n 1 cat"
-alias wlh="watch -c -n 0.5 eza -alhF"
+alias wcat="watch -c -n 1 batcat"
+alias wlh="watch -c -n 0.5 eza -alh"
 alias wlm="watch -c -n 0.5 ls -l --block-size=MB"
-
 
 #> Functions | NOTE: cd(), ng() & nf() are not mine, but I don't remember where I got them from.
 ##> Interactive cd
@@ -247,6 +248,16 @@ function cd() {
         [[ ${#dir} != 0 ]] || return 0
         builtin cd "$dir" &> /dev/null
     done
+}
+
+#> Prints timestamp
+function ts() {
+    echo $(date "+%Y%m%d_%H%M%S")
+}
+
+#> Lists history between two entries
+function hi() {
+    history | sed -n "$1,$2p"
 }
 
 ##> Opens file by text
@@ -291,7 +302,7 @@ alias hfd="history | grep "
 
 ##> Activates virtualenv at given path
 function vs0() {
-        source $1/bin/activate
+    source $1/bin/activate
 }
 
 ##> Creates virtualenv at given path, activates it & upgrades default packages
