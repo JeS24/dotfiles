@@ -4,13 +4,14 @@ This repository hosts the dotfiles, I use. It also contains some scripts that ar
 ## dotfiles (`./.config/`)
 | File | Description |
 | ---- | ----------- |
+| [.zshrc](./.config/shell/zsh/.zshrc) | zsh configuration |
+| [tmux.conf](./.config/tmux/tmux.conf) | tmux configuration |
+| [.nanorc](./.config/nano/.nanorc) | Nano configuration |
+| [.hushlogin](./.config/shell/.hushlogin) | Hides the login message (Empty file)
 | [Winget Packages & DSC files](./.config/winget/) | Winget Packages & [Desired State Configurations (DSC)](https://www.youtube.com/watch?v=9HlM0xuu01M) |
 | [jes24-default.code-profile](./.config/.vscode/jes24-default.code-profile) | VS Code profile |
-| [.zshrc](./.config/shell/zsh/.zshrc) | zsh configuration |
-| [starship.toml](./.config/shell/starship/starship.toml) | Starship configuration |
 | [Microsoft.PowerShell_profile.ps1](./.config/shell/pwsh/Microsoft.PowerShell_profile.ps1) | Powershell (> v7) configuration |
-| [.hushlogin](./.config/shell/.hushlogin) | Hides the login message (Empty file)
-| [.nanorc](./.config/nano/.nanorc) | Nano configuration |
+| [starship.toml](./.config/shell/starship/starship.toml) | Starship configuration |
 | [.gitconfig](./.config/git/.gitconfig) | Git configuration |
 | [`startup.jl`](./.config/julia/startup.jl) | Julia startup file |
 
@@ -18,8 +19,8 @@ This repository hosts the dotfiles, I use. It also contains some scripts that ar
 
 | Script | Description |
 | ------ | ----------- |
+| [`setup.sh`](./scripts/setup.sh) | Main setup script. It will set up the dotfiles and run the tmux backup and setup scripts. |
+| [`tmux-backup.sh`](./scripts/tmux-backup.sh) | Backs up tmux configuration files to `~/system/` |
 | [`gen-yaml.ps1`](./scripts/gen-yaml.ps1) |   Gets all installed winget packages and exports them to a single `windows.configuration.dsc.yaml` file |
 | [`socket_test.py`](./scripts/socket_test.py) | Checks if the socket is open. `ping` is not always reliable. More details can be found here: https://docs.python.org/3/library/socket.html |
 | [`julia-scicomp.jl`](./scripts/julia-scicomp.jl) | Installs useful utility, machine learning & scientific computing Julia packages |
-| [`setup.sh`](./scripts/setup.sh) | Main setup script. It will set up the dotfiles and run the tmux backup and setup scripts. |
-| [`tmux-backup.sh`](./scripts/tmux-backup.sh) | Backs up tmux configuration files to `~/system/` |
